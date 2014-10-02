@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scene>
+    <textures>
+        <texture name="ground" color="0.4 0.3 0.3" />
+        <texture name="wall" color="0.4 0.5 0.5" />
+        <texture name="ceiling" color="0.5 0.5 0.5" />
+        <texture name="light" color="0.7 0.7 0.7" />
+    </textures>
+    <materials>
+        <material name="ground" reflection="0" diffuse-texture="ground" specular-texture="ground" />
+        <material name="ceiling" reflection="0" diffuse-texture="ceiling" specular-texture="ceiling" />
+        <material name="wall" reflection="0" diffuse-texture="wall" specular-texture="wall" />
+        <material name="light" light="true" emission="1.0" emission-texture="light" />
+        <material name="refracted"  refraction="1.0" />
+    </materials>
+    <shapes>
+        <shape type="sphere" material="light" center="0 9 0" radius="0.2" />
+        <shape type="sphere" material="light" center="0 3 0" radius="0.2" />
+        <shape type="sphere" material="refracted" center="-3 0 0" radius="0.8" />
+        <shape type="sphere" material="refracted" center="3 0 0" radius="0.8" />
+        <shape type="sphere" material="refracted" center="0 0 0" radius="0.8" />
+        <shape type="plane" material="ground" normal="0 1 0" distance="4.4" />
+        <shape type="plane" material="ceiling" normal="0 -1 0" distance="10" />
+        <shape type="plane" material="wall" normal="1 0 0" distance="10" />
+        <shape type="plane" material="wall" normal="-1 0 0" distance="10" />
+        <shape type="plane" material="wall" normal="0 0 1" distance="10" />
+        <shape type="plane" material="wall" normal="0 0 -1" distance="10" />
+    </shapes>
+</scene>
+

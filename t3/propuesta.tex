@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\begin{document}
+\title{Visualización de Terreno Mediante Ray-Tracing en GPU}
+\author{Ronie Salgado}
+\date{}
+
+\maketitle
+
+El objetivo de este proyecto consiste en crear un ray-tracer sencillo en GPU
+para explorar el uso de la API de OpenCL. Para ello, se pretende visualizar
+un terreno sencillo representado mediante un {\it height-map}, el cual puede
+ser generado de diversos modos. Se explorara en un primer objetivo la generación
+del terreno a partir de herramientas como {\it Perlin Noise}\cite{perlin}, un generador
+pseudo aleatorio, diferenciable y cuyos valores son ``deterministas'' para una 
+posición dada en el espacio. \\
+
+Como punto de partida se utilizara un tutorial disponible en el archivo del
+sitio web {\it flipcode}\cite{raytrace}. Adaptando adecuadamente el algoritmo para
+usarlo en GPU con un solo objeto a visualizar, un terreno representado que se
+representa como una grilla rectangular de la que solo se almacenan las alturas.
+Para ello, se pretende utilizar una técnica similar a la usada en
+{\it Parallax-Mapping}. \\
+
+En adición a ello, se pretende experimentar un poco con la generación de cielo,
+aplicando técnicas existentes para ello\cite{gpugems}. \\
+
+La plataforma a utilizar es el lenguaje de programación C++, sobre Linux Mint
+64-bit, SDL 1.2 para la creación de una ventana, OpenCL para programar y
+comunicarse con la GPU y CMake para la construcción del proyecto. \\
+
+No se pretende buscar un rendimiento elevado, ni muchos cuadros por segundo,
+solo experimentar con una demo. La ventaja de usar {\it raytracing} se encuentra
+en la trivialidad de implementar sombras realistas, reflexión y refracción con
+esa técnica.
+
+
+\begin{thebibliography}{9}
+
+\bibitem{perlin} Kern Perlin, \emph{Making Noise} Accedido en 2013, disponible en:
+         {\it http://www.noisemachine.com/talk1/index.html}
+\bibitem{gpugems}
+  Sean O'Neil Leslie Lamport, \emph{GPU Gems 2, Chapter 16.} NVIDIA Corporation, 2004.
+        Disponible en: {\it http://http.developer.nvidia.com/GPUGems2/gpugems2\_chapter16.html}
+\bibitem{raytrace}
+ Jacco Bikker , \emph{Raytracing Topics \& Techniques}. 2004. Disponible en: {\it http://www.flipcode.com/archives/Raytracing\_Topics\_Techniques-Part\_1\_Introduction.shtml}
+\end{thebibliography}
+
+\end{document}
+

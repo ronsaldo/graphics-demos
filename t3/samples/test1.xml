@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scene>
+    <textures>
+        <texture name="ground" type="color" color="0.4 0.3 0.3 1.0" />
+        <texture name="big-sphere" type="color" color="0.7 0.7 0.7 1.0" />
+        <texture name="small-sphere" type="color" color="0.7 0.7 1.0 1.0" />
+        <texture name="light1" type="color" color="0.4 0.4 0.4 1.0" />
+        <texture name="light2" type="color" color="0.6 0.6 0.6 1.0" />
+    </textures>
+    <materials>
+        <material name="ground" reflection="0.2" diffuse-texture="ground" specular-texture="ground" />
+        <material name="big-sphere" reflection="1.0" diffuse="0.0" specular-texture="big-sphere" />
+        <material name="small-sphere" reflection="1.0" diffuse="0.1" diffuse-texture="small-sphere" specular-texture="small-sphere" />
+        <material name="light1" light="1" emission="1.0" emission-texture="light1" />
+        <material name="light2" light="1" emission="1.0" emission-texture="light2" />
+    </materials>
+    <shapes>
+        <shape type="plane" name="ground" material="ground"  normal="0 1 0" distance="4.4" />
+        <shape type="sphere" name="big-sphere" material="big-sphere" center="1 -0.8 3" radius="2.5" />
+        <shape type="sphere" name="small-sphere" material="small-sphere" center="-5.5 -0.5 7" radius="2" />
+        <shape type="sphere" name="light1" material="light1" center="0 5 5" radius="0.1" />
+        <shape type="sphere" name="light2" material="light2" center="2 5 1" radius="0.1" />
+    </shapes>
+</scene>
+

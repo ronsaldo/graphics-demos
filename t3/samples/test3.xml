@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<scene>
+    <sky day="true" >
+        <sun color="1 1 1" direction="0 1 1" />
+    </sky>
+    <textures>
+        <texture name="ground" color="0.4 0.3 0.3" />
+        <texture name="big-sphere" color="0.7 0.7 0.7" />
+        <texture name="small-sphere" color="0.7 0.7 1.0" />
+        <texture name="light1" color="0.4 0.4 0.4" />
+        <texture name="light2" color="0.6 0.6 0.6" />
+    </textures>
+    <materials>
+        <material name="ground" diffuse-texture="ground" specular-texture="ground" />
+        <material name="big-sphere" reflection="1.0" diffuse="0.0" specular-texture="big-sphere" />
+        <material name="small-sphere" reflection="1.0" diffuse="0.1" diffuse-texture="small-sphere" specular-texture="small-sphere" />
+        <material name="light1" light="true" emission="1.0" emission-texture="light1" />
+        <material name="light2" light="true" emission="1.0" emission-texture="light2" />
+    </materials>
+    <shapes>
+        <shape type="plane" material="ground" normal="0 1 0" distance="4.4" />
+        <shape type="sphere" material="big-sphere" center="1 -0.8 3" radius="2.5" />
+        <shape type="sphere" material="small-sphere" center="-5.5 -0.5 7" radius="2" />
+        <shape type="sphere" material="light1" center="0 5 5" radius="0.1" />
+        <shape type="sphere" material="light2" center="2 5 1" radius="0.1" />
+    </shapes>
+</scene>
+

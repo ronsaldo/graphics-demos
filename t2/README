@@ -1,0 +1,34 @@
+The Tarea 2 is written in C++, using SDL for window system interfacing, GLEW
+for OpenGL extension access, and CMake for building.
+
+Building requirements:
+·A C++ compilers as g++.
+·SDL development headers.
+·GLEW development headers.
+·CMake.
+·A 32 bit or 64 bit x86 Linux system.
+
+In Ubuntu the following shell command cane be used for installing the required
+dependencies:
+
+$ sudo apt-get install build-essential g++ libsdl1.2-dev libglew-dev cmake
+
+For building, you have create a build folder an run CMake to generate the build
+makefiles. For example, at the top source folder the following shell commands
+can be used:
+
+$ mkdir build-dir
+$ cd build-dir
+$ cmake .. -G "Unix Makefiles"
+
+That will generate the makefiles. Then for actually building you only have to
+run make:
+$ make
+
+That last command is going to build the whole "Tarea2", producing a native
+executable program in the dist folder under the created build directory.
+To run the built program, at the dist folder the following shell command
+can be used:
+
+$ ./Tarea2
+
